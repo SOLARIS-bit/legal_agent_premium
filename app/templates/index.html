@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Algorithme Défenseur Premium</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+</head>
+<body>
+    <h1>Algorithme Défenseur Premium</h1>
+
+    <form method="POST" enctype="multipart/form-data">
+        Email (optionnel) : <input type="email" name="email"><br>
+        <input type="file" name="pdf" required>
+        <button type="submit">Extraire texte</button>
+    </form>
+
+    {% if extracted_text %}
+        <h2>Texte extrait :</h2>
+        <pre>{{ extracted_text }}</pre>
+
+        <form method="POST" action="/generate">
+            <input type="hidden" name="motif" value="{{ detected_motif }}">
+            Nom: <input type="text" name="nom" value="M. Dupont"><br>
+            Date: <input type="text" name="date" value="{{ date }}"><br>
+            <button type="submit">Générer PDF</button>
+        </form>
+    {% endif %}
+</body>
+</html>

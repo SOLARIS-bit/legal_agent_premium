@@ -1,0 +1,3 @@
+Nom : {{ nom }}
+Date : {{ date }}
+Motif : {{ motif }}

@@ -1,0 +1,9 @@
+Flask
+pytesseract
+pdf2image
+docxtpl
+docx2pdf
+transformers
+torch
+sentencepiece
+sqlalchemy
