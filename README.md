@@ -1,5 +1,3 @@
----
-
 # **Algorithme Défenseur – Legal Agent Premium**
 
 ## **Description**
