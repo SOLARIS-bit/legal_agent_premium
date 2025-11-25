@@ -1,0 +1,29 @@
+cat > .gitignore << "EOF"
+env/
+venv/
+__pycache__/
+*.pyc
+
+# Poids lourds / ML
+*.so
+*.bin
+*.pt
+*.pth
+*.safetensors
+
+# PDFs / uploads
+uploads/
+*.pdf
+
+# DB locales
+*.db
+
+# PyInstaller / Build
+build/
+dist/
+*.spec
+
+# Logs
+*.log
+
+EOF
